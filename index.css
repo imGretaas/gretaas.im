@@ -1,0 +1,194 @@
+*{
+	overflow-x: hidden; 
+}
+
+body > div#nav{
+	position: relative;
+	top:0;
+	right: 0;
+}
+
+body > #nav > ul{
+	list-style-type: none;
+	float: right;
+	margin-right: 2em;
+}
+
+/*body > #nav > ul > li{
+	width: 3.5em;
+	float: left;
+}*/
+
+body > #nav > ul > li > a{
+	color: gray;
+	text-decoration: none;
+}
+
+body > #nav > ul > li > a:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+div#title{
+	width: 100%;
+}
+
+h1{
+	font-family: "Source Serif Pro";
+	font-weight: 400;
+	margin-left: 10%;
+	color: gray;
+}
+
+div#animation > h1:nth-of-type(2),div#animation > h1:nth-of-type(3),div#animation > h1:nth-of-type(4){
+	display: none;
+}
+
+h1 > span#name{
+	font-size: 1.3em;
+	color: gray;
+	font-weight: 600;
+}
+
+h1 > span#point{
+	color:#d8f096;
+	font-size: 3.5em;
+}
+
+div.page > ul > li > span#cpp{
+	color: #00d8d8;
+}
+
+div.page > ul > li > span#html{
+	color:#ff3333;
+}
+div.page > ul > li > span#mysql{
+	color: #003367;
+}	
+
+div.page > ul > li > span#matlab{
+color: #cccc00;
+}
+
+div.page{
+	width: 60%;
+	margin: 0 auto;
+}
+
+div.page > p, div.page > ul.listskills{
+	margin: 0 0.5em;
+	color: #575757;
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-weight: 400;
+	font-size: 0.95em;
+}
+
+div.page > p > span#im{
+	color: #ffae1a;
+}
+
+div.page > h2, div.page > div.contacts > h2{
+	font-size: 0.8em;
+	color: #cccccc;
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-weight: 400;
+}
+
+div.page > ul.listskills{
+	list-style-position: inside;
+	list-style-type: circle;
+	margin: 0.5em 0;
+}
+
+div.page > p > a#squerz{
+	color: rgb(97,160,180);
+	text-decoration: none;
+}
+
+div.page > p > a#squerz:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+div.page > p > a#squerz:visited{
+	color: #663399;
+}
+
+div#line{
+	width: 40%;
+	margin: 1em auto;
+	height: 1px;
+	background-color: #cccccc;
+}
+
+div.page > div.contacts{
+	width: 30%;
+	float: left;
+}
+
+div.page > div.contacts:first-of-type{
+	margin-left: 20%;
+}
+
+div.page > div.contacts > p, div.page > div.contacts > h2, div.page > div.contacts > ul > li{
+	text-align: center;
+}
+
+div.page > div.contacts > p, div.page > div.contacts > h2{
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-weight: 400;
+}
+
+div.page > div.contacts > p{
+	font-size: 0.95em;
+	color: 575757;
+}
+
+div.page > div.contacts > ul{
+	padding-left: 0.3em;
+}
+
+div.page > div.contacts > ul > li{
+	list-style-position: inside;
+	list-style-type: none;
+	line-height: 1.2em;
+}
+
+div.page > div.contacts > ul > li > a{
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-weight: 400;
+	font-size: 0.9em;
+	text-decoration: none;
+	color: #333366;
+}
+
+div.page > div.contacts > ul > li > a:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+div.page > div.contacts > ul > li > a:visited{
+	color: #996666;
+}
+
+footer{
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	margin: 3em 0 0 0;
+}
+
+footer > p{
+	text-align: center;
+	line-height: 2em;
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-weight: 400;
+	background-color: #cccccc;
+	font-size: 0.8em;
+	bottom: 0;
+	color: white;
+}
+
+footer > p > span#heart{
+	color: #000001;
+}
