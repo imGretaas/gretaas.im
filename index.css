@@ -5,7 +5,7 @@
 body > div#nav{
 	position: relative;
 	top:0;
-	right: 0;
+	right: 10%;
 }
 
 body > #nav > ul{
@@ -14,14 +14,11 @@ body > #nav > ul{
 	margin-right: 2em;
 }
 
-/*body > #nav > ul > li{
-	width: 3.5em;
-	float: left;
-}*/
-
 body > #nav > ul > li > a{
 	color: gray;
 	text-decoration: none;
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-size: 0.7em;
 }
 
 body > #nav > ul > li > a:hover{
@@ -30,29 +27,49 @@ body > #nav > ul > li > a:hover{
 }
 
 div#title{
-	width: 100%;
+	width: 15em;
+	height: 12em;
+	border: solid 1px;
+	color: gray;
+	margin-left: 10%;
+	overflow: hidden;
 }
 
 h1{
-	font-family: "Source Serif Pro";
+	font-family: 'DM Serif Display', serif;
 	font-weight: 400;
 	margin-left: 10%;
 	color: gray;
 }
 
-div#animation > h1:nth-of-type(2),div#animation > h1:nth-of-type(3),div#animation > h1:nth-of-type(4){
-	display: none;
-}
-
 h1 > span#name{
-	font-size: 1.3em;
 	color: gray;
 	font-weight: 600;
+	font-family: "Courier New", monospace;
+	font-size: 1.7em;
 }
 
 h1 > span#point{
 	color:#d8f096;
-	font-size: 3.5em;
+	font-size: 1.5em;
+	font-weight: 600;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid orange; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em; /* Adjust as needed */
+	animation: typing 3.5s steps(40, end),
+	blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 
 div.page > ul > li > span#cpp{
@@ -80,7 +97,7 @@ div.page > p, div.page > ul.listskills{
 	color: #575757;
 	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
 	font-weight: 400;
-	font-size: 0.95em;
+	font-size: 0.85em;
 }
 
 div.page > p > span#im{
@@ -126,6 +143,21 @@ div.page > div.contacts{
 	float: left;
 }
 
+div.page > div.contacts > a#paperino{
+	text-decoration: none;
+	font-size: 0.9em;
+	color: #46ada7;
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-weight: 400;
+	text-align: center;
+	margin-left:22%;
+	cursor: pointer;
+}
+
+div.page > div.contacts > a#paperino:hover{
+	text-decoration: underline;
+}
+
 div.page > div.contacts:first-of-type{
 	margin-left: 20%;
 }
@@ -139,9 +171,10 @@ div.page > div.contacts > p, div.page > div.contacts > h2{
 	font-weight: 400;
 }
 
+
 div.page > div.contacts > p{
-	font-size: 0.95em;
-	color: 575757;
+	font-size: 0.85em;
+	color: #575757;
 }
 
 div.page > div.contacts > ul{
@@ -157,9 +190,9 @@ div.page > div.contacts > ul > li{
 div.page > div.contacts > ul > li > a{
 	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
 	font-weight: 400;
-	font-size: 0.9em;
 	text-decoration: none;
-	color: #333366;
+	color: #78a3ff;
+	font-size: 0.9em;
 }
 
 div.page > div.contacts > ul > li > a:hover{
