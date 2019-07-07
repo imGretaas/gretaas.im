@@ -312,3 +312,10 @@ div.page > div.contacts > a#paperino{
 	font-size: 2vw;
 }
 }
+
+@media only screen and (max-width: 501px){
+
+div.page > div.contacts > ul > li > a{
+	font-size: 0.7em;
+}
+}
