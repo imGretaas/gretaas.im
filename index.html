@@ -7,13 +7,19 @@
     <meta name="author" content="Greta Cavedon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" />
 
-    <link rel="stylesheet" type="text/css" href="index.css" media="handheld, screen"/>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="index(print).css" media="print" />
+    <noscript>
+    <link rel="stylesheet" type="text/css" href="index(noscript).css" media="handheld, screen"/>
+	</noscript>
 
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet"> 
   </head>
 <body>
-
+	
+<div class="toggle"></div>
+<p>&#9790;</p>
 <div id="nav">
 	<ul>
 		<li>&#9743; <a href="#paperino">Contacts</a></li>
@@ -28,7 +34,7 @@
 
 <div class="page">
 	<h2>Info</h2>
-	<p>Hello, <span id="im">i am</span> Greta Cavedon and i am an Italian student of Computer Science at University of Pauda.<br/>
+	<p>Hello, <span id="im">i am</span> Greta Cavedon and i am an Italian student of Computer Science at University of Padua (Italy).<br/>
 	Well, for now i am 24 (twenty-four) y&#47;o; i was born in 1995 so if i don't update this before next year, you can count alone.<br/>	
 	</p>	
 	<h2>Skills</h2>
@@ -42,7 +48,7 @@
 		<li>Learn how to use <span id="matlab">Matlab</span></li>
 		<li>I am fascinated by theory of Automata</li>
 		<li>I like playing with Matrix in Algebra</li>
-		<li>Try my hand with PS and AI (Suite Adobe).</li>
+		<li>Create drafts with PS and AI (Suite Adobe).</li>
 	</ul>
 	<p>Language that i speak:</p>
 	<ul class="listskills">
@@ -76,21 +82,45 @@
 	<div class="contacts">
 		<h2>Social</h2>
 		<ul>
-			<li><a href="https://squerz.com">Squerz</a></li>
 			<li><a href="https://github.com/imGretaas">GitHub</a></li>
 			<li><a href="https://twitter.com/imGretaas">Twitter</a></li>
+			<li><a href="https://www.linkedin.com/in/gretacavedon/">LinkedIn</a></li>
 			<li><a href="https://open.spotify.com/user/1167319190?si=fdA0shpbRzS76L_wmDMUsw">Spotify</a></li>
+		</ul>	
+	</div>
+	<div class="contacts">
+		<h2>Website</h2>
+		<ul>
+			<li><a href="https://squerz.com">Squerz</a></li>
 		</ul>	
 	</div>	
 </div>
 
 
-<!--- Source Code Pro ----->
-<!------ color gray ----->
 <footer>
 	<p>Created with <span id="heart">&#9829;</span>.</p>
 </footer>	
 
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.toggle').click(function(){
+            $('.toggle').toggleClass('active')
+            $('body').toggleClass('night')
+        })
+    })
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43036993-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-43036993-5');
+</script>
 
 
 </body>

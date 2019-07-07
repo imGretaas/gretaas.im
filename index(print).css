@@ -5,6 +5,7 @@
 }
 
 body > p:first-of-type{
+	display: none;
 	float: right;
 	margin-right: 3em;
 	font-size: 1.5em;
@@ -36,12 +37,13 @@ body > #nav > ul > li > a:hover{
 }
 
 div#title{
-	width: 15em;
-	height: 12em;
+	width: 11em;
+	height: 11em;
 	border: solid 1px;
 	color: gray;
 	overflow: hidden;
-	margin: 2em 0 1em 10%;
+	margin: 2em 0 1em 0;
+	line-height: 2.3em;
 }
 
 h1{
@@ -57,12 +59,12 @@ h1 > span#name{
 	color: gray;
 	font-weight: 600;
 	font-family: "Courier New", monospace;
-	font-size: 1.7em;
+	font-size: 1em;
 }
 
 h1 > span#point{
-	color:#d8f096;
-	font-size: 1.5em;
+	color:#d8f096 !important;
+	font-size: 1em;
 	font-weight: 600;
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
 	border-right: .15em solid orange; /* The typwriter cursor */
@@ -99,7 +101,7 @@ color: #cccc00;
 }
 
 div.page{
-	width: 65%;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -145,6 +147,10 @@ div.page > p > a#squerz:visited{
 	color: #663399;
 }
 
+div.page > p > a::after{
+  content:" <" attr(href) ">";
+}
+
 div#line{
 	width: 40%;
 	margin: 1em auto;
@@ -159,12 +165,12 @@ div.page > div.contacts{
 
 div.page > div.contacts > a#paperino{
 	text-decoration: none;
-	font-size: 1.35vw;
+	font-size: 0.9em;
 	color: #46ada7;
 	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
 	font-weight: 400;
 	text-align: center;
-	margin-left:3vw;
+	margin-left:15%;
 	cursor: pointer;
 }
 
@@ -172,8 +178,8 @@ div.page > div.contacts > a#paperino:hover{
 	text-decoration: underline;
 }
 
-div.page > div.contacts:first-of-type, div.page > div.contacts:nth-of-type(3){
-	margin-left: 20%;
+div.page > div.contacts:first-of-type{
+	margin-left: 5%;
 }
 
 div.page > div.contacts > p, div.page > div.contacts > h2, div.page > div.contacts > ul > li{
@@ -219,6 +225,12 @@ div.page > div.contacts > ul > li > a:visited{
 	color: #996666;
 }
 
+div.page > div.contacts > ul > li >  a::after{
+	display: block;
+	font-size: 0.7em;
+  	content:" <" attr(href) ">";
+}
+
 footer{
 	position: relative;
 	bottom: 0;
@@ -241,74 +253,5 @@ footer > p > span#heart{
 	color: red;
 }
 
-/* ---- NIGHT MODE ---- */
 
-body.night
-{
-    background: #00151f;
-}
-.toggle
-{
-    position: absolute;
-    top: 1.5em;
-    right: 1em;
-    background: #fff;
-    border: 1px solid #000001;
-    width: 45px;
-    height: 20px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: 0.5s;
-}
-.toggle.active
-{
-    background: #000001;
-    border: 1px solid #fff;
-}
-.toggle:before
-{
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 16px;
-    height: 16px;
-    background: #00151f;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-.toggle.active:before
-{
-    left: 27px;
-    background: #fff;
-}
 
-body.night div#nav , body.night div#title > h1, body.night div#title > h1 > span#name, body.night div.page > p, body.night div.page > ul.listskills{
-	color: white;
-}
-
-body.night div.page > div.contacts > p, body.night p:first-of-type{
-	color: white;
-} 
-
-body.night footer > p{
-	color: #000001 !important;
-}
-
-body.night div#nav > ul > li{
-	color: #ccc;
-}
-
-@media only screen and (max-width: 701px){
-	div.page{
-		width: 75%;
-	}
-
-	body > div#nav{
-		right: 1.5em;
-	}
-
-div.page > div.contacts > a#paperino{
-	font-size: 2vw;
-}
-}

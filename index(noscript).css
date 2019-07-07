@@ -1,0 +1,11 @@
+div.toggle{
+	display: none;
+}
+
+body > p:first-of-type{
+	display: none;
+}
+
+body > div#nav{
+	margin-right: 7em;
+}
