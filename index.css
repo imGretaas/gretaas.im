@@ -18,6 +18,11 @@ body > div#nav{
 	right: 3em;
 }
 
+body > ul#skip{
+	display: none;
+	font-size: 0;
+}
+
 body > #nav > ul{
 	list-style-type: none;
 	float: right;
@@ -293,6 +298,7 @@ body.night div.page > div.contacts > p, body.night p:first-of-type{
 
 body.night footer > p{
 	color: #000001 !important;
+	background-color: #e6eef0;
 }
 
 body.night div#nav > ul > li{
@@ -300,13 +306,14 @@ body.night div#nav > ul > li{
 }
 
 @media only screen and (max-width: 701px){
-	div.page{
-		width: 75%;
-	}
 
-	body > div#nav{
-		right: 1.5em;
-	}
+div.page{
+	width: 75%;
+}
+
+body > div#nav{
+	right: 1.5em;
+}
 
 div.page > div.contacts > a#paperino{
 	font-size: 2vw;
