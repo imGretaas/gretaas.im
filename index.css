@@ -169,8 +169,20 @@ div.page > div.contacts > a#paperino{
 	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
 	font-weight: 400;
 	text-align: center;
-	margin-left:3vw;
+	margin-left:5vw;
 	cursor: pointer;
+}
+
+div.page > div.contacts > p:last-of-type > span#first{
+	color:orange;
+}
+
+div.page > div.contacts > p:last-of-type > span#second{
+	color: #B498E0;
+}
+
+div.page > div.contacts > p:last-of-type > span#third{
+	color: #B0C988;
 }
 
 div.page > div.contacts > a#paperino:hover{
@@ -305,6 +317,13 @@ body.night div#nav > ul > li{
 	color: #ccc;
 }
 
+@media only screen and (max-width: 1172px){
+	div.page > div.contacts:nth-of-type(3){
+		width: 100%;
+		margin-left:0;
+	}
+}
+
 @media only screen and (max-width: 701px){
 
 div.page{
@@ -314,6 +333,7 @@ div.page{
 body > div#nav{
 	right: 1.5em;
 }
+
 
 div.page > div.contacts > a#paperino{
 	font-size: 2vw;

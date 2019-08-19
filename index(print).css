@@ -231,6 +231,18 @@ div.page > div.contacts > ul > li >  a::after{
   	content:" <" attr(href) ">";
 }
 
+div.page > div.contacts > p:last-of-type > span#first{
+	color:orange;
+}
+
+div.page > div.contacts > p:last-of-type > span#second{
+	color: #B498E0;
+}
+
+div.page > div.contacts > p:last-of-type > span#third{
+	color: #B0C988;
+}
+
 footer{
 	position: relative;
 	bottom: 0;
