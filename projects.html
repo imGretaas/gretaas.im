@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Greta Cavedon's Portfolio" />
+    <meta name="keywords" content="Greta Cavedon" />
+    <meta name="author" content="Greta Cavedon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" />
+
+    <title>Greta Cavedon</title>
+    <meta property="og:site_name" content="Greta Cavedon">
+    <meta property="og:title" content="Projects by Greta Cavedon">
+    <meta property="og:url" content="https://gretaas.im/projects">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Greta Cavedon's Portfolio">
+
+    <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="projects.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="projects(print).css" media="print" />
+    <noscript>
+    <link rel="stylesheet" type="text/css" href="projects(noscript).css" media="screen"/>
+	</noscript>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  </head>
+<body>
+
+<ul id="skip">
+  <li>
+    <a href="#cont" tabindex="0" lang="en">Go to the content</a>
+  </li>
+  <li>
+    <a href="#back" tabindex="0" lang="en">Turn back in the main portfolio page</a>
+  </li>
+  <li>
+    <a href="#projects" tabindex="0" lang="en">Go to Projects</a>
+  </li>
+</ul>
+
+<div class="toggle"></div>
+<p>&#9790;</p>
+
+<ul id="breadcrumb">
+    <li><a id="back" href="https://gretaas.im/" alt="Turn back in the main portfolio page">Greta Cavedon</a></li>
+    <li lang="en">Projects</li>
+</ul>
+
+<div id="prj">
+    <h1 id="title" lang="en">My Projects</h1>
+</div>
+
+<div class="rowTit">
+    <h2 id="projects">University</h2>
+    <div class="line"></div>
+</div>
+
+<div class="row">
+    <div class="content" id="cont">
+        <img src="img/AirDB.png" id="airdb" alt="AirDB's logo">
+        <p lang="en">AirDB is an airport database project. <br/> It was created entirely by me and Giuseppe Zatta during the university database course (A.Y. 2017/2018).
+        </p>
+        <div>
+            <a class="underline" href="https://gretaas.im/Projects/Relazione%20AirDB.pdf" lang="en">Take a look</a>
+        </div>
+    </div>
+    <div class="content">
+        <img src="img/4fork.png" alt="4 Forchette's logo">
+        <p lang="en">4 Forchette is an e-commerce project, created entirely by me and my group of the university course of web technologies (A.Y. 2018/2019).
+        </p>
+        <div>
+            <a class="underline" href="https://gretaas.im/Projects/4Forchette/" lang="en">Take a look</a>
+        </div>
+    </div>
+    <div class="content">
+        <div id="tep">
+            <img src="img/tep.png" id="tep" alt="tep partecipant badge logo">
+        </div>
+        <p lang="en">I participated at the eTandem project, in portugues language, offered by my university, here my paper (A.Y. 2019/2020).
+        </p>
+        <div>
+            <a class="underline" href="https://gretaas.im/Projects/eTandemPT.pdf" lang="en">Take a look</a>
+        </div>
+    </div>
+</div>    
+
+<p id="wip">Work in progress..</p>
+
+<div class="clearer"></div>
+
+<footer>
+    <p lang="en">Created with <span id="heart">&#9829;</span>. &copy; gretaas.im</p>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.toggle').click(function(){
+            $('.toggle').toggleClass('active')
+            $('body').toggleClass('night')
+        })
+    })
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43036993-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-43036993-5');
+</script>
+
+</body>
+</html>

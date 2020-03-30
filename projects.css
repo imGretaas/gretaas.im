@@ -1,0 +1,651 @@
+*{
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	font-size:1em;
+}
+
+body > ul#breadcrumb{
+	padding: 0.7em 1em;
+	list-style: none;
+	/*width:25%;*/
+	float: left;
+}
+
+body > ul#breadcrumb > li{
+	display: inline;
+	font-size: 0.8em;
+	color: gray;
+	font-family: monospace;
+}
+
+ul#breadcrumb li + li:before{
+	padding: 0.5em;
+	color: gray;
+	content: ">";
+}
+
+body.night > ul#breadcrumb li + li:before, body.night > ul#breadcrumb > li{
+	color: white;
+}
+
+ul#breadcrumb > li > a{
+	color: orange;
+	text-decoration: none;
+}
+
+ul#breadcrumb li a:visited{
+  color: #B498E0;
+  text-decoration: none;
+}
+
+ul#breadcrumb li a:hover{
+  text-decoration:underline;
+}
+
+body > a#goback:hover{
+	text-decoration: underline;
+}
+
+ul#skip{
+	display: none;
+	font-size: 0;
+}
+
+body > p{
+	float: right;
+	margin-right: 3em;
+	font-size: 1.5em;
+	margin-top: 0.9em;
+	color: #000001;
+}
+
+div#prj{
+	text-align: center;
+	width: 100%;
+}
+
+#title{
+	border-right: solid .17em orange;
+  	white-space: nowrap;
+  	overflow: hidden;    
+  	font-family: 'DM Serif Display', serif;
+  	font-size: 1.7em;
+  	/*width: 20%;*/
+  	margin: 0 auto;
+  	color: gray;
+}
+
+#title{
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 15%;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: orange;}
+  to{border-right-color: transparent;}
+}
+
+div.rowTit{
+	width: 88%;
+	margin-left: 6%;
+	margin-top: 1em;
+}
+
+div.rowTit > h2{
+	display: block;
+	float: left;
+	font-family: 'DM Serif Display', serif;
+	font-size: 1.5em;
+	width: 15%;
+	color: #ccc;
+}
+
+body.night div.rowTit > h2, body.night > div.rowTit > div.line{
+	color: white;
+}
+
+div.rowTit > div.line{
+	float: left;
+	display: block;
+	border-bottom: 1px solid #ccc;
+	width: 85%;
+	padding-bottom: 1em;
+}
+
+.row{
+	width: 80%;
+	margin-left: 6%;
+	margin-bottom: 2em;
+	padding: 4%;
+	border-bottom: 1px solid #ccc;
+}
+
+body.night > .row{
+	border-bottom: 1px solid white;
+}
+
+.row > .content{
+	width: 25%;
+	float: left;
+	height: 20em;
+	border-radius: 1.5em;
+	/*box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);*/
+	transition: all 200ms ease-out;
+}
+
+.row > .content:hover{
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+  box-shadow: 0 0 1.5em #ccc;
+}
+
+.row > .content:nth-of-type(2){
+	margin-left: 12.5%;
+	margin-right: 12.5%;
+}
+
+.row > .content > img{
+	width: 60%;
+	margin: 0 20%;
+	margin-top: 2em;
+}
+
+.row > .content > div#tep{
+	width: 100%;
+}
+
+.row > .content > div#tep > img{
+	width: 7em;
+	height: 7em;
+	margin-left: auto;
+	margin-top: 1em;
+
+}
+
+.row > .content > img#airdb{
+	margin-top: 2.5em;
+}
+
+.row > .content > p{
+	text-align: center;
+	margin: 1em;
+	margin-bottom: 1em;
+	color: #575757;
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-size: 0.85em;
+}
+
+.row > .content > div{
+	text-align: center;
+	width: 100%;
+	overflow-y:hidden;
+}
+
+.row > .content > div > a{
+	text-align: center;
+	width: 30%;
+	padding: 5% 3%;
+	margin-left: auto;
+	display: block;
+	text-decoration: none;
+	background-color: #061232;
+	color:white;
+	font-family: "Courier New", monospace;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+
+.row > .content > div > a:hover{
+	/*text-decoration: underline;*/
+	cursor: pointer;
+}
+
+.row > .content > div > a.underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.row > .content > div > a.underline:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  width: 0;
+  bottom: 10.5px;
+  background: orange;
+  height: 4px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.row > .content > div > a.underline:hover:after,
+.row > .content > div > a.underline:focus:after,
+.row > .content > div > a.underline:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+body > p#wip{
+	width: 80%;
+	margin: 1em 10%;
+	font-family: "Courier New", monospace;
+	font-size: 1.4em;
+	text-align: left;
+	color: gray;
+	border-left: 1px solid orange;
+	padding-left: 0.5em;
+}
+
+body.night > p#wip{
+	color: white;
+	border-left-color: #d8f096;
+}
+
+footer{
+	width: 100%;
+	display: block;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+}
+
+footer > p{
+	line-height: 2em;
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-weight: 400;
+	background-color: #e6eef0;
+	font-size: 0.8em;
+	bottom: 0;
+	color: #000001;
+}
+
+footer > p > span#heart{
+	color: red;
+}
+
+.clearer{
+	clear:both;
+}
+
+/* ---- NIGHT MODE ---- */
+
+body.night
+{
+    background: #00151f;
+}
+.toggle
+{
+    position: absolute;
+    top: 1.5em;
+    right: 1em;
+    background: #fff;
+    border: 1px solid #00151f;
+    width: 45px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.toggle.active
+{
+    background: #00151f;
+    border: 1px solid #fff;
+}
+.toggle:before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: #00151f;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.toggle.active:before
+{
+    left: 27px;
+    background: #fff;
+}
+
+body.night div#nav > ul > li{
+	color: #ccc;
+}
+
+body.night .row > .content:hover{
+	box-shadow: 0 0 1.5em #324F5E;
+}
+
+body.night > .row > .content > div > a{
+	color: #00151f;
+	background-color: #AF9EFF;
+}
+
+body.night p:first-of-type{
+	color: white;
+}
+
+body.night > .row > .content > p{
+	color: white;
+}
+
+body.night >  div > h1#title{
+	color: white;
+}
+
+body.night footer > p{
+	color: #000001 !important;
+	background-color: #e6eef0;
+}
+
+
+@media only screen and (min-width: 900px) and (max-width: 1024px){
+
+	.row{
+		padding-bottom: 3em;
+	}
+
+	.row > .content > img{
+		width: 55%;
+		margin: 0 22.5%;
+	}
+
+	/* aggiungere row:first-of-type se si aggiungono altre righe; */
+	.row > .content:nth-of-type(2) > img{
+		margin-top: 1.5em;
+	}
+
+	.row > .content > div#tep > img{
+		width: 5em;
+		height: 5em;
+	}
+
+	.row > .content > div{
+		width: 100%;
+	}
+
+	.row > .content > div > a{
+		width: 40%;
+		margin: 0 auto;
+		font-size: 0.65em;
+		padding: 3% 5%;
+	}
+
+	.row > .content > div > a.underline{
+		position: unset;
+		display: block;
+	}
+
+	.row > .content > div > a.underline::after {
+		display: none;
+	}
+
+	.row > div.content{
+		-ms-transform: scale(1.1); /* IE 9 */
+  		-webkit-transform: scale(1.1); /* Safari 3-8 */
+  		transform: scale(1.1); 
+  		box-shadow: 0 0 1.5em #ccc;
+	}
+
+	.row > div.content:hover{
+		-ms-transform: hidden; /* IE 9 */
+  		-webkit-transform: hidden; /* Safari 3-8 */
+  		transform: hidden; 
+		box-shadow: hidden;
+	}
+
+	@keyframes animated-text{
+  		from{width: 0;}
+  		to{width: 18%;}
+	}
+
+	body.night .row > div.content{
+		-ms-transform: scale(1.1); /* IE 9 */
+  		-webkit-transform: scale(1.1); /* Safari 3-8 */
+  		transform: scale(1.1); 
+  		box-shadow: 0 0 1.5em #324F5E;
+	}
+
+	body.night .row > div.content:hover{
+		-ms-transform: hidden; /* IE 9 */
+  		-webkit-transform: hidden; /* Safari 3-8 */
+  		transform: hidden; 
+		box-shadow: hidden;
+	}
+}
+
+
+@media only screen and (min-width: 502px) and (max-width: 900px){
+
+	div.rowTit > h2{
+		width: 30%;
+	}
+
+	div.rowTit > div.line{
+		width: 70%;
+	}
+
+	.row > .content{
+		width: 90%;
+		height: 12em;
+		margin: 1.5em 5%;
+	}
+
+	.row > .content > img{
+		width: 15%;
+		margin: 0.5em 5%;
+		float: left;
+	}
+
+	.row > .content > p{
+		width: 45%;
+		margin-right: 5%;
+		margin-left: 0;
+		float: left;
+	}
+
+	.row > .content > div, .row > .content > div#tep{
+		width: 20%;
+		float:left;
+		display: block;
+		margin-right: 5%;
+	}
+
+	.row > .content > div#tep > img{
+		width:4em;
+		height:4em;
+	}
+
+	.row > .content:nth-of-type(2) > img{
+		margin-top: 1.5em;
+	}
+
+	.row > .content > div > a{
+		font-size: 0.6em;
+	}
+
+	.row > .content > div:last-of-type{
+		margin-top: 4.7em;
+	}
+
+	.row > .content > div > a.underline{
+		position: unset;
+		vertical-align: middle;
+	}
+
+	.row > .content > div > a.underline::after {
+		display: none;
+	}
+
+	.row > .content:nth-of-type(2){
+		margin: 1.5em 5%;
+	}
+
+	.row > div.content{
+		-ms-transform: scale(1.1); /* IE 9 */
+  		-webkit-transform: scale(1.1); /* Safari 3-8 */
+  		transform: scale(1.1); 
+  		box-shadow: 0 0 1.5em #ccc;
+	}
+
+	.row > div.content:hover{
+		-ms-transform: hidden; /* IE 9 */
+  		-webkit-transform: hidden; /* Safari 3-8 */
+  		transform: hidden; 
+		box-shadow: hidden;
+	}
+
+	body.night .row > div.content{
+		-ms-transform: scale(1.1); /* IE 9 */
+  		-webkit-transform: scale(1.1); /* Safari 3-8 */
+  		transform: scale(1.1); 
+  		box-shadow: 0 0 1.5em #324F5E;
+	}
+
+	body.night .row > div.content:hover{
+		-ms-transform: hidden; /* IE 9 */
+  		-webkit-transform: hidden; /* Safari 3-8 */
+  		transform: hidden; 
+		box-shadow: hidden;
+	}
+
+	body > p#wip{
+		margin: 0 10% 2.5em;
+	}
+
+	/* Effetto scrittura su testo */
+	@keyframes animated-text{
+  		from{width: 0;}
+  		to{width: 35%;}
+	}
+}
+
+@media only screen and (max-width: 501px){
+
+	/* Effetto scrittura su testo */
+	@keyframes animated-text{
+  		from{width: 0;}
+  		to{width: 50%;}
+	}
+
+	div.rowTit > h2{
+	width: 40%;
+	margin-right: 5%;
+	}
+
+	div.rowTit > div.line{
+		width: 55%;
+	}
+
+	.row{
+		width: 100%;
+		margin-left: 0;
+		border-bottom:none; 
+	}
+
+	body.night .row{
+		border-bottom: none;
+	}
+
+	.row > div.content{
+		width: 80%;
+		height: 12em;
+		margin: 2em 6%;
+		padding: 0;
+		-ms-transform: scale(1.1); /* IE 9 */
+  		-webkit-transform: scale(1.1); /* Safari 3-8 */
+  		transform: scale(1.1); 
+  		box-shadow: 0 0 1.5em #ccc;
+	}
+
+	.row > div.content:hover{
+		-ms-transform: hidden; /* IE 9 */
+  		-webkit-transform: hidden; /* Safari 3-8 */
+  		transform: hidden; 
+		box-shadow: hidden;
+	}
+
+	.row > .content > p{
+		font-size: 0.75em;
+	}
+
+	.row > .content > div > a{
+		padding: 1% 3%;
+		width: 35%;
+	}
+
+	.row > .content > div > a.underline{
+		display: block;
+		position: unset;
+		margin: 0 auto;
+		vertical-align: middle;
+	}
+
+	.row > .content > div > a.underline:after{
+		display: none;
+	}
+
+	body.night .row > div.content{
+		-ms-transform: scale(1.1); /* IE 9 */
+  		-webkit-transform: scale(1.1); /* Safari 3-8 */
+  		transform: scale(1.1); 
+  		box-shadow: 0 0 1.5em #324F5E;
+	}
+
+	body.night .row > div.content:hover{
+		-ms-transform: hidden; /* IE 9 */
+  		-webkit-transform: hidden; /* Safari 3-8 */
+  		transform: hidden; 
+		box-shadow: hidden;
+	}
+
+	.row > div.content > img{
+		width: 25%;
+		float:left;
+		margin: 2em 5%;
+	}
+
+	.row >  div.content > p{
+		width: 60%;
+		margin: 2em 5% 1em;
+	}
+
+	.row > .content:nth-of-type(2){
+		margin-left: 6%;
+	}
+
+	.row > .content > div#tep{
+		width: 25%;
+		float:left;
+		margin: 2em 5%;
+	}
+
+	.row > .content > div#tep > img{
+		width: 3.5em;
+		height: 3.5em;
+		margin: 0 auto;
+	}	
+
+	body > p#wip{
+		margin: 0 10% 2em;
+	}
+
+	footer{
+		position: unset;
+	}
+
+}

@@ -12,32 +12,81 @@ body > p:first-of-type{
 	color: #000001;
 }
 
-body > div#nav{
-	position: relative;
-	top:1.5em;
-	right: 3em;
+div#nav{
+	margin-top:1.5em;
+	margin-right: 3em;
 }
 
-body > ul#skip{
+ul#skip{
 	display: none;
 	font-size: 0;
 }
 
-body > #nav > ul{
+#nav > ul{
 	list-style-type: none;
 	float: right;
+	width: 11em;
 }
 
-body > #nav > ul > li > a{
+#nav > ul > li > a, #nav > ul > li > p{
 	color: gray;
 	text-decoration: none;
 	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
 	font-size: 0.7em;
 }
 
-body > #nav > ul > li > a:hover{
+#nav > ul > li > p{
+	display: inline;
+}
+
+#nav > ul > li:first-of-type:hover > p{
+	cursor: default;
+}
+
+#nav > ul > li > a:hover{
 	text-decoration: underline;
 	cursor: pointer;
+}
+
+#nav > ul > li{
+	float:left;
+	width: 5.5em;
+}
+
+#nav > ul > li:first-of-type > ul{
+	display: none;
+}
+
+#nav > ul > li:first-of-type:hover > ul{
+	display: block;
+	position: absolute;
+	z-index: 1;
+	background-color: #e6eef0;
+}
+
+#nav > ul > li:first-of-type:hover > ul{
+	width: 8em;
+	padding: 0 1%;
+	border-top: 2px solid #B498E0;
+	border-bottom-right-radius: 0.5em;
+}
+
+body.night #nav > ul > li:first-of-type:hover > ul{
+	border-top: 2px solid orange;
+}
+
+#nav > ul > li:first-of-type:hover > ul > li > a{
+	color: gray;
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-weight: 400;
+	font-size: 0.7em;
+	line-height: 1em;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#nav > ul > li:first-of-type:hover > ul > li > a:hover{
+	text-decoration: underline;
 }
 
 div#title{
@@ -150,7 +199,7 @@ div.page > p > a#squerz:visited{
 	color: #663399;
 }
 
-div#line{
+div.line{
 	width: 40%;
 	margin: 1em auto;
 	height: 1px;
@@ -169,21 +218,23 @@ div.page > div.contacts > a#paperino{
 	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
 	font-weight: 400;
 	text-align: center;
-	margin-left:5vw;
 	cursor: pointer;
 }
 
-div.page > div.contacts > p:last-of-type > span#first{
+div.page > div.contacts > p:last-of-type > span.first, div.page > div.contacts > a:last-of-type > span.first{
 	color:orange;
 }
 
-div.page > div.contacts > p:last-of-type > span#second{
+
+div.page > div.contacts > p:last-of-type > span.second, div.page > div.contacts > a:last-of-type > span.second{
 	color: #B498E0;
 }
 
-div.page > div.contacts > p:last-of-type > span#third{
+
+div.page > div.contacts > p:last-of-type > span.third, div.page > div.contacts > a:last-of-type > span.third{
 	color: #B0C988;
 }
+
 
 div.page > div.contacts > a#paperino:hover{
 	text-decoration: underline;
@@ -191,6 +242,7 @@ div.page > div.contacts > a#paperino:hover{
 
 div.page > div.contacts:first-of-type, div.page > div.contacts:nth-of-type(3){
 	margin-left: 20%;
+	text-align: center;
 }
 
 div.page > div.contacts > p, div.page > div.contacts > h2, div.page > div.contacts > ul > li{
@@ -236,19 +288,117 @@ div.page > div.contacts > ul > li > a:visited{
 	color: #996666;
 }
 
+	/* --------- C A R D --------- */
+
+#people{
+	width:65%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#people > h3{
+	font-size: 0.9em;
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-weight: 400;
+	color: #cccccc;
+	margin-bottom: 0.7em;
+}
+
+#people > .Section{
+	text-align: center;
+}
+
+#people > .Section > .Card{
+	height: 6em;
+	display: block;
+	float: left;
+	margin-bottom:0.7em;
+	border: 1px solid #ccc;
+}
+
+#people > .Section:last-of-type > .Card{
+	width: 11.5%;
+	margin-right: 1%;
+}
+
+#people > .Section > .Card(5n){
+	margin-right: 0;
+}
+
+#people > .Section > .Card:hover{
+	cursor: pointer;
+}
+
+#people > .Section > h4{
+	font-size: 0.8em;
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-weight: 400;
+	color: #cccccc;
+	margin-bottom: 0.7em;
+}
+
+#people > .Section > .Card > h5{
+	font-size: 0.8em;
+	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
+	font-weight: 400;
+	color: #575757;
+	margin: 1.2em 1%;
+}
+
+#people > .Section > .Card > div{
+	height: 50%;
+	overflow-y: hidden;
+}
+
+#people > .Section > .Card > div > img{
+	width: 100%;
+}
+
+#people > .Section:first-of-type, #people > .Section:nth-of-type(2){
+	width: 49%;
+	float: left;
+}
+
+#people > .Section:first-of-type{
+	margin-right: 0.5%;
+}
+
+#people > .Section:nth-of-type(2){
+	margin-left: 0.5%;
+}
+
+#people > .Section:first-of-type > .Card, #people > .Section:nth-of-type(2) > .Card{
+	width: 32%;
+}	
+
+#people > .Section:first-of-type > .Card:first-of-type, #people > .Section:nth-of-type(2) > .Card:first-of-type{
+	margin-left: 17.5%;
+	margin-right: 2%; 
+}
+
+#people > .Section:last-of-type{
+	width: 100%;
+}
+
+#people > .Section:first-of-type > div:last-of-type, #people > .Section:nth-of-type(2) > div:last-of-type, #people > .Section:nth-of-type(3) > div:last-of-type{
+	margin-right: 0;
+}
+
+/* --------- E N D  C A R D --------- */
+
 footer{
 	position: relative;
 	bottom: 0;
 	width: 100%;
-	margin: 3em 0 0 0;
+	margin: 1.4em 0 0 0;
+	text-align: center;
 }
 
 footer > p{
-	text-align: center;
 	line-height: 2em;
 	font-family: "source-code-pro", "Source Code Pro", "Courier New", monospace;
 	font-weight: 400;
-	background-color: #cccccc;
+	background-color: #e6eef0;
 	font-size: 0.8em;
 	bottom: 0;
 	color: #000001;
@@ -270,7 +420,7 @@ body.night
     top: 1.5em;
     right: 1em;
     background: #fff;
-    border: 1px solid #000001;
+    border: 1px solid #00151f;
     width: 45px;
     height: 20px;
     cursor: pointer;
@@ -279,7 +429,7 @@ body.night
 }
 .toggle.active
 {
-    background: #000001;
+    background: #00151f;
     border: 1px solid #fff;
 }
 .toggle:before
@@ -304,7 +454,7 @@ body.night div#nav , body.night div#title > h1, body.night div#title > h1 > span
 	color: white;
 }
 
-body.night div.page > div.contacts > p, body.night p:first-of-type{
+body.night div.page > div.contacts > p, body.night p:first-of-type, body.night #nav > ul > li > a, body.night #nav > ul > li > p{
 	color: white;
 } 
 
@@ -330,19 +480,25 @@ div.page{
 	width: 75%;
 }
 
-body > div#nav{
+div#nav{
 	right: 1.5em;
 }
 
-
 div.page > div.contacts > a#paperino{
-	font-size: 2vw;
-}
+	font-size: 0.7em;
+	margin-left: 0;
+	}
 }
 
 @media only screen and (max-width: 501px){
-
-div.page > div.contacts > ul > li > a{
-	font-size: 0.7em;
+	div.page > div.contacts > ul > li > a{
+		font-size: 0.7em;
+	}
 }
+
+@media only screen and (max-width: 355px){
+	div.page > div.contacts > a#paperino{
+		font-size: 0.5em;
+	}
+
 }
