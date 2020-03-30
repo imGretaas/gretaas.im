@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-EN">
+<html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Greta Cavedon Portfolio" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Greta Cavedon's Portfolio" />
     <meta name="keywords" content="Greta Cavedon" />
     <meta name="author" content="Greta Cavedon" />
 
@@ -13,45 +13,70 @@
     <meta property="og:title" content="Greta Cavedon">
     <meta property="og:url" content="https://gretaas.im">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Greta Cavedon's Portfolio"> 
+    <meta property="og:description" content="Greta Cavedon's Portfolio">
 
     <link href="favicon.ico" rel="icon" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="index.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="index(print).css" media="print" />
     <noscript>
-    <link rel="stylesheet" type="text/css" href="index(noscript).css" media="handheld, screen"/>
+    <link rel="stylesheet" type="text/css" href="index(noscript).css" media="screen"/>
 	</noscript>
 
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
   </head>
 <body>
 
 <ul id="skip">
   <li>
-    <a href="gretaas.im" tabindex="0" lang="en">Go to the content</a>
+    <a href="#content" tabindex="0" lang="en">Go to the content</a>
   </li>
-</ul>  	
-	
+  <li>
+  	<a href="#projects" tabindex="0" lang="en">Go to Projects</a>
+  </li>
+  <li>
+  	<a href="#paperino" tabindex="0" lang="en">Go to Contacts</a>
+  </li>
+  <li>
+  	<a href="#people" tabindex="0" lang="en">Go to People</a>
+  </li>
+</ul>
+
 <div class="toggle"></div>
 <p>&#9790;</p>
 <div id="nav">
 	<ul>
-		<li>&#9743; <a href="#paperino">Contacts</a></li>
-	</ul>	
+		<li><a href="https://gretaas.im/projects.html" lang="en" alt="Go to Projects Page">Projects</a></li>
+		<!------
+		<li><p id="projects">Projects</p>
+			<ul>
+				<li>
+					<a href="https://gretaas.im/Projects/Relazione%20AirDB.pdf">AirDB Report &#40;IT&#41;</a>
+				</li>
+				<li>
+					<a href="https://gretaas.im/Projects/4Forchette/">4Forks &#40;IT&#41;</a>
+				</li>
+				<li>
+					<a href="https://gretaas.im/Projects/eTandemPT.pdf" en="PT">eTandem (PT)</a>
+				</li>
+			</ul>
+		</li>
+		--------->
+		<li>&#9743; <a href="#paperino" lang="en" alt="Greta's contact">Contacts</a></li>
+	</ul>
 </div>
 
 <!---- Source Serif Pro ---->
 <div id="title">
 	<h1>Hi!<br/>My name is<br/>
 	<span id="name">GRETA</span><span id="point">.</span></h1>
-</div>	
+</div>
 
 <div class="page" id="content">
 	<h2>Info</h2>
 	<p>Hello, <span id="im">I am</span> Greta Cavedon and I am an Italian student of Computer Science at University of Padua (Italy).<br/>
-	Well, for now I am 24 (twenty-four) y&#47;o; I was born in 1995 so if I don't update this before next year, you can count for yourself.<br/>	
-	</p>	
+	Well, for now I am 24 (twenty-four) y&#47;o; I was born in 1995 so if I don't update this before next year, you can count for yourself.<br/>
+	</p>
 	<h2>Skills</h2>
 	<p>
 	This portfolio page was born just for fun, in a night of summer semester, for testing my capabilities to play with the code (HTML and CSS in particular), learned during the project of Web Technology (2019) at University.<br/>
@@ -69,8 +94,8 @@
 	<ul class="listskills">
 		<li>Italian, of course</li>
 		<li>English</li>
-		<li><span lang-"en">Un poquito de espa&#241;ol</span></li>
-	</ul>	
+		<li><span lang="en">Un poquito de espa&#241;ol</span></li>
+	</ul>
 	<p>I am never satisfied with my knowledge, because there is no limit to the knowledge of subjects.
 	</p>
 	<h2>Interests</h2>
@@ -86,36 +111,36 @@
 	<p>Never Give Up.</p>
 </div>
 
-<div id="line"></div>
+<div class="line"></div>
 
 <div class="page">
 	<div class="contacts">
 		<h2>Contacts</h2>
 		<p>Email me at:</p>
-		<a name="paperino" id="paperino" href="mailto:info@gretaas.im">x[at]y[dot]z</a>
-		<p>where: <span id="first">x=info</span> <span id="second">y=gretaas</span> <span id="third">z=im</span></p>
-	</div>	
+		<a name="paperino" id="paperino" href="mailto:info@gretaas.im" title="email me!"><span class="first">x</span>[at]<span class="second">y</span>[dot]<span class="third">z</span></a>
+		<p>where: <span class="first">x=info</span> <span class="second">y=gretaas</span> <span class="third">z=im</span></p>
+	</div>
 	<div class="contacts">
 		<h2>Social</h2>
 		<ul>
-			<li><a href="https://github.com/imGretaas">GitHub</a></li>
-			<li><a href="https://twitter.com/imGretaas">Twitter</a></li>
-			<li><a href="https://www.linkedin.com/in/gretacavedon/">LinkedIn</a></li>
-			<li><a href="https://open.spotify.com/user/1167319190?si=fdA0shpbRzS76L_wmDMUsw">Spotify</a></li>
-		</ul>	
+			<li><a href="https://github.com/imGretaas" title="Greta Cavedon on GitHub">GitHub</a></li>
+			<li><a href="https://twitter.com/imGretaas" title="Greta Cavedon on Twitter">Twitter</a></li>
+			<li><a href="https://www.linkedin.com/in/gretacavedon/" title="Greta Cavedon on LinkedIn">LinkedIn</a></li>
+			<li><a href="https://open.spotify.com/user/1167319190?si=fdA0shpbRzS76L_wmDMUsw" title="Greta Cavedon on Spotify">Spotify</a></li>
+		</ul>
 	</div>
 	<div class="contacts">
 		<h2>Blog</h2>
 		<ul>
-			<li><a href="https://squerz.com">Squerz</a></li>
-		</ul>	
-	</div>	
+			<li><a href="https://squerz.com" title="Greta Cavedon's Blog (IT language)">Squerz</a></li>
+		</ul>
+	</div>
 </div>
 
 
 <footer>
-	<p>Created with <span id="heart">&#9829;</span>.</p>
-</footer>	
+	<p>Created with <span id="heart">&#9829;</span>. &copy; gretaas.im</p>
+</footer>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
