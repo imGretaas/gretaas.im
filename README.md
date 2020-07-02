@@ -11,3 +11,11 @@ It's responsive; I used, mainly, text.
 If you want, you can check it googling/following this address link: https://gretaas.im 
 
 Thanks!
+
+--- UPDATES 2020 ---
+
+# gretinha.com
+
+Italy, 02/07/20
+
+The website is the same but I changed the domain name from gretaas.im to gretinha.com.
